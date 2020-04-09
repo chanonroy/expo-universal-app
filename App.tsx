@@ -1,15 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-
-const Home = () => <Text>Home</Text>;
+import App from './src';
 
 const About = () => <Text>About</Text>;
 
-export default function App() {
+export default function Main() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-    </View>
+    <App />
   );
 }
 
