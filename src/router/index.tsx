@@ -1,20 +1,20 @@
-import React, { useContext, ReactElement } from "react"
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
-import Home from "../screens/home"
-import About from "../screens/about"
+import React, { FC } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import NotFound from "../screens/not-found"
+import About from '../screens/about';
+import Home from '../screens/home';
+import NotFound from '../screens/not-found';
 
-const AppRouter = () => {
-    return (
-        <Router>
-            <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/about" component={About} />
-                <Route component={ NotFound } />
-            </Switch>
-        </Router>
-    )
-}
+const AppRouter: FC = () => {
+  return (
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/about" component={About} />
+        <Route component={NotFound} />
+      </Switch>
+    </Router>
+  );
+};
 
-export default AppRouter
+export default AppRouter;
